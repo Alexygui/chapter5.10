@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/style.css" />
+		<script type="text/javascript" src="js/jquery.js" ></script>
+		<script>
+			$(function(){
+				$('div.tab_menu ul li').click(function(){
+					$(this).addClass('selected')
+							.siblings().removeClass('selected');
+					
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<div class="tab">
+			<div class="tab_menu">
+				<ul>
+					<li class="selected">时事</li>
+					<li>体育</li>
+					<li>娱乐</li>
+				</ul>
+			</div>
+			<div class="tab_box">
+				<ul>
+					<li>时事</li>
+					<li class="hide">体育</li>
+					<li class="hide">娱乐</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+</html>
