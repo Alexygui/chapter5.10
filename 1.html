@@ -7,11 +7,18 @@
 		<script type="text/javascript" src="js/jquery.js" ></script>
 		<script>
 			$(function(){
-				$('div.tab_menu ul li').click(function(){
+				$div_li = $('div.tab_menu>ul>li');
+				$div_li.click(function(){
 					$(this).addClass('selected')
 							.siblings().removeClass('selected');
+				
+				var index = $div_li.index(this);//获取当前的li元素在所有的li元素里面中的索引
+				$('div.tab_box>div')
+					.eq(index).show()
+					.siblings().hide();
 					
 				})
+				
 			})
 		</script>
 	</head>
@@ -25,11 +32,9 @@
 				</ul>
 			</div>
 			<div class="tab_box">
-				<ul>
-					<li>时事</li>
-					<li class="hide">体育</li>
-					<li class="hide">娱乐</li>
-				</ul>
+					<div>时事</div>
+					<div class="hide">体育</div>
+					<div class="hide">娱乐</div>
 			</div>
 		</div>
 	</body>
