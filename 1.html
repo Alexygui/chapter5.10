@@ -17,6 +17,10 @@
 					.eq(index).show()
 					.siblings().hide();
 					
+				}).hover(function(){
+					$(this).addClass('hover')
+				},function(){
+					$(this).removeClass('hover')
 				})
 				
 			})
